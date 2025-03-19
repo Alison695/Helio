@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class FatorialJOptionPaneDouble {
+public class Q11 {
     public static void main(String[] args) {
         String input = JOptionPane.showInputDialog("Digite um número inteiro para calcular o fatorial:");
         try {
