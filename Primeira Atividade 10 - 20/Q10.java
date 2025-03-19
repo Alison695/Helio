@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class ValoresNegativosJOptionPane {
+public class Q10 {
     public static void main(String[] args) {
         double[] numeros = new double[5];
         int contadorNegativos = 0;
