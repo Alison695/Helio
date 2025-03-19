@@ -1,19 +1,20 @@
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
-public class FatorialDouble {
+public class FatorialJOptionPaneDouble {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        System.out.print("Digite um número inteiro para calcular o fatorial: ");
-        int numero = entrada.nextInt();
+        String input = JOptionPane.showInputDialog("Digite um número inteiro para calcular o fatorial:");
+        try {
+            int numero = Integer.parseInt(input);
 
-        if (numero < 0) {
-            JOptionPane.showMessageDialog(null, "O fatorial não está definido para números negativos.");
-        } else {
-            double fatorial = calcularFatorial(numero);
-            JOptionPane.showMessageDialog(null, "O fatorial de " + numero + " é: " + fatorial);
+            if (numero < 0) {
+                JOptionPane.showMessageDialog(null, "O fatorial não está definido para números negativos.");
+            } else {
+                double fatorial = calcularFatorial(numero);
+                JOptionPane.showMessageDialog(null, "O fatorial de " + numero + " é: " + fatorial);
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Entrada inválida. Digite um número inteiro.");
         }
-
-        entrada.close();
     }
 
     public static double calcularFatorial(int numero) {
