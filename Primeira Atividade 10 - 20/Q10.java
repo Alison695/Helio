@@ -21,26 +21,3 @@ public class Q10 {
         JOptionPane.showMessageDialog(null, "Quantidade de valores negativos: " + contadorNegativos);
     }
 }
-
-//Portugol:
-
-programa
-{
-    funcao inicio()
-    {
-        real numeros[5]
-        inteiro contadorNegativos = 0
-
-        para (i = 0; i < 5; i++) {
-            escreva("Digite o ", i + 1, "º valor: ")
-            leia(numeros[i])
-
-            se (numeros[i] < 0) {
-                contadorNegativos++
-            }
-        }
-
-        escreva("Quantidade de valores negativos: ", contadorNegativos)
-    }
-}
-
